@@ -30,28 +30,28 @@ This project is a solo endeavor aimed at creating an e-commerce website for Komb
 ## Getting Started
 
 1. **Clone the Repository**:
-   \```
-   git clone [repository-link]
+   ```
+   git clone https://github.com/MashdorDev/kombucha-ecommerce.git
    cd kombucha-ecommerce
-   \```
+   ```
 
 2. **Install Dependencies**:
    Navigate to both frontend and backend directories separately and run:
-   \```
+   ```
    npm install
-   \```
+   ```
 
 3. **Running the Project**:
    - For frontend:
-     \```
+     ```
      cd frontend
      npm start
-     \```
+     ```
    - For backend:
-     \```
+     ```
      cd backend
      npm run dev
-     \```
+     ```
 
 ## Contribution
 
