@@ -5,6 +5,7 @@ import ProductsSection from "../../components/ProductsSection/ProductsSection";
 import AboutSection from "../../components/AboutSection/AboutSection";
 import BlogSection from "../../components/BlogSection/BlogSection";
 import QuoteSlide from "../../components/QuoteSlide/QuoteSlide";
+import FeaturedProduct from "../../components/FeaturedProduct/FeaturedProduct";
 import "./Home.css";
 
 function Home() {
@@ -14,13 +15,14 @@ function Home() {
       <ProductsSection />
       <AboutSection />
       <BlogSection />
-      <QuoteSlide
-        quote="Bought your Red Grape kombucha at the Bean Fiend the other day and it was amazing!"
-        author="Victoria Erin"
-      />
-      <QuoteSlide
-        quote="Tried the Gin-Ja and Amy’s Blend and both are delicious!!"
-        author="Britt Silegren"
+      <QuoteSlide />
+      <FeaturedProduct
+        imageUrl="//narrowgatefoods.com/cdn/shop/products/DSC7789_2_300x.jpg?v=1619017385"
+        altText="Gin-ja Booch"
+        title="Gin-ja Booch"
+        price="$7 per bottle"
+        sizeOptions={["355ml", "750ml Growler"]}
+        shareUrl="https://narrowgatefoods.com/products/gin-ja-booch?variant=32850816008239"
       />
     </main>
   );
