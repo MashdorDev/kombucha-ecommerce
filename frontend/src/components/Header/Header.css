@@ -3,25 +3,27 @@
     justify-content: space-between;
     align-items: center;
     padding: 1rem 5%;
-    background-color: #333;
+    background-color: #ffffff;
+    color: #4a4a4a;
 }
 
 .logo img {
-    height: 50px;
+    height: 80px;
+    display: block;
+    margin: 0 auto;
+    text-align: center;
+    line-height: 1.2;
+
 }
 
-.navbar ul {
-    list-style-type: none;
+.product-list{
+    flex-direction: row;
     display: flex;
-    gap: 20px;
+    justify-content: space-between;
 }
 
-.navbar a {
-    text-decoration: none;
-    color: white;
-    transition: color 0.3s;
-}
-
-.navbar a:hover {
-    color: #ffcc00;
+.blog-posts{
+    flex-direction: row;
+    display: flex;
+    justify-content: space-between;
 }
