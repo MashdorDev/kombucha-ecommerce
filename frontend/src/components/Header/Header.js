@@ -1,12 +1,17 @@
 import React from 'react';
 import './Header.css';
+import favicon from '../../assets/narrowgate-logo-site.png';
 
 function Header() {
     return (
         <header className="header">
+            {/* #eb4f47 */}
+            <title>Narrow Gate Foods - Kombucha, Kimchi, Water Kefir, and Sauerkraut</title>
+
+
             <div className="logo">
-                {/* Add your logo image here */}
-                <img src="/path-to-your-logo.png" alt="Kombucha Logo" />
+
+                <img src={favicon} alt="Kombucha Logo" />
             </div>
             <nav className="navbar">
                 <ul>
