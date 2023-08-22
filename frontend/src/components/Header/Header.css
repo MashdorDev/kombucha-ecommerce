@@ -1,29 +1,26 @@
+
 .header {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: 1rem 5%;
+    padding-left: 1rem 5%;
+    padding-right: 1rem 5%;
+    padding-bottom: 1rem 5%;
     background-color: #ffffff;
     color: #4a4a4a;
-}
+    position: fixed; /* Make the header fixed */
+    width: 100%;
+    top: 0;
+    transition: top 0.3s; /* Smooth transition for hiding/showing */
+  }
 
-.logo img {
+  .header--hidden {
+    top: -100px; /* Hide the header */
+  }
+
+  .logo img {
     height: 80px;
     display: block;
     margin: 0 auto;
-    text-align: center;
     line-height: 1.2;
-
-}
-
-.product-list{
-    flex-direction: row;
-    display: flex;
-    justify-content: space-between;
-}
-
-.blog-posts{
-    flex-direction: row;
-    display: flex;
-    justify-content: space-between;
-}
+  }

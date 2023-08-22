@@ -1,0 +1,9 @@
+.product-list{
+    flex-direction: row;
+    display: flex;
+    justify-content: space-between;
+}
+
+/* position: absolute;
+  height: 100%;
+  width: 100%; */

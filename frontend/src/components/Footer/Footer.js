@@ -1,8 +1,9 @@
 import React from 'react';
+import './Footer.css';
 
 const Footer = () => {
     return (
-        <div className="page-width">
+        <div className="footer">
             <div className="flex-footer">
                 <div className="flex-footer__item flex-footer__item--menu">
                     <ul className="site-footer__linklist">
@@ -26,7 +27,7 @@ const Footer = () => {
                                     <input type="submit" className="btn btn--clear" value="Ok" name="subscribe" id="Subscribe" />
                                 </div>
                             </div>
-                            <div className="site-footer__newsletter-message" aria-role="alert"></div>
+                            <div className="site-footer__newsletter-message"></div>
                         </form>
                     </div>
                 </div>
@@ -36,12 +37,12 @@ const Footer = () => {
                     <div className="social-links">
                         <ul className="list--inline">
                             <li className="social-links__icon">
-                                <a target="_blank" href="https://www.facebook.com/NarrowGateFoods/" title="Narrow Gate Foods on Facebook" tabindex="-1">
+                                <a target="_blank" href="https://www.facebook.com/NarrowGateFoods/" rel="noopener noreferrer" title="Narrow Gate Foods on Facebook" tabindex="-1">
                                     {/* Facebook SVG Icon */}
                                 </a>
                             </li>
                             <li className="social-links__icon">
-                                <a target="_blank" href="https://www.instagram.com/narrowgatefoods/" title="Narrow Gate Foods on Instagram" tabindex="-1">
+                                <a target="_blank" rel="noopener noreferrer" href="https://www.instagram.com/narrowgatefoods/" title="Narrow Gate Foods on Instagram" tabindex="-1">
                                     {/* Instagram SVG Icon */}
                                 </a>
                             </li>
@@ -50,7 +51,7 @@ const Footer = () => {
                 </div>
                 <div className="site-footer__copyright flex-footer__item--one-third">
                     <small>Copyright © 2023, <a href="/" title="">Narrow Gate Foods</a>.</small>
-                    <small className="site-footer__powered-by"><a target="_blank" rel="nofollow" href="https://www.shopify.com?utm_campaign=poweredby&amp;utm_medium=shopify&amp;utm_source=onlinestore">Powered by Shopify</a></small><br />
+                    <small className="site-footer__powered-by"><a target="_blank" rel="noopener noreferrer" href="https://www.shopify.com?utm_campaign=poweredby&amp;utm_medium=shopify&amp;utm_source=onlinestore">Powered by Shopify</a></small><br />
                     <small><a href="//narrowgatefoods.com/pages/privacy-policy">Privacy Policy</a></small>&nbsp;&nbsp;
                     <small><a href="//narrowgatefoods.com/pages/terms-conditions">Terms &amp; Conditions</a></small>
                 </div>

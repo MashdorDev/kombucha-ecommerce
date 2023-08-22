@@ -1,5 +1,6 @@
 // ProductsSection.js
 import React from "react";
+import "./ProdutsSection.css";
 
 function ProductsSection() {
   return (

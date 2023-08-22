@@ -1,13 +1,28 @@
 .footer {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding: 1rem 5%;
-    background-color: #333;
-    color: white;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem 5%;
+  background-color: #333;
+  color: white;
 }
 
 .social-media img {
-    height: 30px;
-    margin-left: 10px;
+  height: 30px;
+  margin-left: 10px;
+}
+
+.flex-footer--parallax .site-footer .flex-footer {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  z-index: 1;
+}
+
+.flex-footer {
+  text-align: center;
+  background-color: #eae7e0;
+  color: #4a4a4a;
+  padding: 40px 0;
 }
