@@ -3,9 +3,6 @@
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding-left: 1rem 5%;
-    padding-right: 1rem 5%;
-    padding-bottom: 1rem 5%;
     background-color: #ffffff;
     color: #4a4a4a;
     position: fixed; /* Make the header fixed */

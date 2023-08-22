@@ -1,0 +1,27 @@
+.about {
+    font-family: Arial, sans-serif;
+    text-align: center;
+    padding: 20px;
+    background-color: #f5f5f5;
+  }
+
+  .about h2 {
+    font-size: 24px;
+    color: #333;
+    margin-bottom: 15px;
+  }
+
+  .about p {
+    font-size: 16px;
+    color: #666;
+    line-height: 1.5;
+  }
+
+  .about a {
+    color: #007bff;
+    text-decoration: none;
+  }
+
+  .about a:hover {
+    text-decoration: underline;
+  }

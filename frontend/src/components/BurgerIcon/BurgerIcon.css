@@ -1,0 +1,96 @@
+/* #burgerIcon {
+    height: 5px;
+    width: 100%;
+   position: relative;
+   margin: 50px auto;
+   transform: rotate(0deg);
+   transition: 0.5s ease-in-out;
+
+}
+
+ .burger-icon {
+    display: block;
+    width: 24px;
+    height: 3px;
+    margin: 2px 0;
+    background-color: #a19081;
+  }
+
+#burgerIcon span {
+   display: block;
+   position: initial;
+   height: 2px;
+   width: 24px;
+   background: #a19081;
+   border-radius: 9px;
+   opacity: 1;
+   left: 16px;
+   transform: rotate(0deg);
+   transition: 0.25s ease-in-out;
+   margin: 0.2vw;
+}
+
+#burgerIcon span:nth-child(1) {
+   top: 16px;
+   transform-origin: left center;
+}
+
+#burgerIcon span:nth-child(2) {
+   top: 24px;
+   transform-origin: left center;
+}
+
+#burgerIcon span:nth-child(3) {
+   top: 32px;
+   transform-origin: left center;
+}
+
+#burgerIcon.open span:nth-child(1) {
+   transform: rotate(32deg);
+   top: calc(9%);
+   left: calc(5%);
+}
+
+#burgerIcon.open span:nth-child(2) {
+   width: 0%;
+   opacity: 0;
+}
+
+#burgerIcon.open span:nth-child(3) {
+   transform: rotate(-32deg);
+   top: calc(9%);
+   left: calc(5%);
+} */
+
+
+#burgerIcon {
+   width: 30px;
+   height: 24px;
+   display: flex;
+   flex-direction: column;
+   justify-content: space-between;
+   cursor: pointer;
+   position: relative;
+   left: 1vw;
+ }
+
+ .burger-icon {
+   display: block;
+   width: 100%;
+   height: 4px;
+   background-color: #333;
+   transition: all 0.3s ease-in-out;
+   background-color: #a19081;
+ }
+
+ #burgerIcon.open .burger-icon--top {
+   transform: translateY(10px) rotate(45deg);
+ }
+
+ #burgerIcon.open .burger-icon--mid {
+   opacity: 0;
+ }
+
+ #burgerIcon.open .burger-icon--bottom {
+   transform: translateY(-10px) rotate(-45deg);
+ }

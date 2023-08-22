@@ -1,5 +1,44 @@
+.blog {
+  font-family: Arial, sans-serif;
+  text-align: center;
+  padding: 20px;
+  background-color: #f5f5f5;
+}
+
+.blog h2 {
+  font-size: 24px;
+  color: #333;
+  margin-bottom: 20px;
+}
+
 .blog-posts {
-  flex-direction: row;
   display: flex;
-  justify-content: space-between;
+  justify-content: space-around;
+  flex-wrap: wrap;
+}
+
+.blog-post {
+  width: 30%;
+  padding: 10px;
+  border: 1px solid #ddd;
+  margin: 10px;
+}
+
+.blog-post h3 {
+  font-size: 20px;
+  color: #333;
+}
+
+.blog-post p {
+  font-size: 16px;
+  color: #666;
+}
+
+.blog-post a {
+  color: #007bff;
+  text-decoration: none;
+}
+
+.blog-post a:hover {
+  text-decoration: underline;
 }

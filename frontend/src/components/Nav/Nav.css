@@ -1,50 +1,61 @@
 .navbar {
-    position: relative;
-    z-index: 12;
-  }
+   /* position: relative;
+   z-index: 12; */
+   /* position: absolute;
+   top: 0;
+   left: 0;
+   background-color: #faf9f6;
+   max-height: 0;
+   width: 100%;
+   text-align: center;
+   overflow-x: hidden;
+   overflow-y: auto;
+   -webkit-overflow-scrolling: touch;
+   opacity: 0;
+   transition: opacity 0.25s ease-out;
+   pointer-events: none;
+   z-index: 5; */
+}
 
-  .btn--clear {
-    background: transparent;
-    border: none;
-  }
+.btn--clear {
+   background: transparent;
+   border: none;
+}
 
-  .btn--square {
-    width: 36px;
-    height: 36px;
-    display: flex;
-    flex-direction: column;
-    justify-content: space-around;
-    padding: 8px;
-  }
+.btn--square {
+   display: flex;
+   flex-direction: column;
+   justify-content: space-around;
+   width: 3.5vw;
+   height: 50px;
+   padding: 0;
+   text-align: center;
+   line-height: 207px;
+   cursor: pointer;
+   fill: #a19081;
+}
 
-  .burger-icon {
-    display: block;
-    width: 24px;
-    height: 3px;
-    margin: 2px 0;
-    background-color: #4a4a4a;
-  }
+.icon__fallback-text {
+   display: none;
+}
 
-  .icon__fallback-text {
-    display: none;
-  }
+.site-header--transparent,
+.site-header--homepage {
+   position: absolute;
+   top: 0;
+   left: 0;
+   right: 0;
+   z-index: 10;
+}
 
-  /* Add this if you want to make the navbar transparent on the homepage */
-  .site-header--transparent,
-  .site-header--homepage {
-    position: absolute;
-    top: 0;
-    left: 0;
-    right: 0;
-    z-index: 10;
-  }
+.menu {
+   display: none;
+}
 
-  .menu {
-    display: none;
-    /* Add other styling for the menu as desired */
-  }
-
-  .menu--open {
-    display: block;
-    /* Add other styling for the expanded menu as desired */
-  }
+.menu--open {
+   display: block;
+   min-height: 100vh;
+   max-height: 100vh;
+   opacity: 1;
+   pointer-events: auto;
+}
