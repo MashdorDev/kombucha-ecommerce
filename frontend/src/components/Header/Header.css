@@ -1,23 +1,12 @@
-
 .header {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    background-color: #ffffff;
-    color: #4a4a4a;
-    position: fixed; /* Make the header fixed */
-    width: 100%;
-    top: 0;
-    transition: top 0.3s; /* Smooth transition for hiding/showing */
-  }
+   background-color: #ffffff;
+   color: #4a4a4a;
+   position: fixed;
+   width: 100%;
+   transition: top 0.3s;
+   height: 55px;
+}
 
-  .header--hidden {
-    top: -100px; /* Hide the header */
-  }
-
-  .logo img {
-    height: 80px;
-    display: block;
-    margin: 0 auto;
-    line-height: 1.2;
-  }
+.header--hidden {
+   top: -100px;
+}

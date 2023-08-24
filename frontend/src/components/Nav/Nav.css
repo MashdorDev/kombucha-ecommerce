@@ -1,20 +1,11 @@
 .navbar {
-   /* position: relative;
-   z-index: 12; */
-   /* position: absolute;
-   top: 0;
-   left: 0;
-   background-color: #faf9f6;
-   max-height: 0;
-   width: 100%;
-   text-align: center;
-   overflow-x: hidden;
-   overflow-y: auto;
-   -webkit-overflow-scrolling: touch;
-   opacity: 0;
-   transition: opacity 0.25s ease-out;
-   pointer-events: none;
-   z-index: 5; */
+   position: relative;
+   z-index: 100;
+   width: 100vw;
+   height: 6vh;
+   display: flex;
+   flex-direction: row;
+   justify-content: space-around;
 }
 
 .btn--clear {
@@ -23,16 +14,19 @@
 }
 
 .btn--square {
-   display: flex;
-   flex-direction: column;
-   justify-content: space-around;
-   width: 3.5vw;
-   height: 50px;
-   padding: 0;
-   text-align: center;
-   line-height: 207px;
+   width: 35px;
    cursor: pointer;
    fill: #a19081;
+   display: flex;
+}
+
+.logo img {
+   position: relative;
+   height: 80px;
+   display: block;
+   margin: 0 auto;
+   line-height: 1.2;
+   z-index: 100;
 }
 
 .icon__fallback-text {
@@ -49,13 +43,111 @@
 }
 
 .menu {
-   display: none;
+   opacity: 0;
+   transform: translateY(100%);
+   transition: opacity 1s cubic-bezier(0.25, 0.46, 0.45, 0.94),
+      transform 1s cubic-bezier(0.25, 0.46, 0.45, 0.94);
 }
 
 .menu--open {
-   display: block;
+   opacity: 1;
+   transform: translateY(0);
+   transition: opacity 2s cubic-bezier(0.25, 0.46, 0.45, 0.94),
+      transform 2s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+
+   position: fixed;
    min-height: 100vh;
    max-height: 100vh;
-   opacity: 1;
    pointer-events: auto;
+   left: 0px;
+   margin-left: auto;
+   padding-left: 0px;
+   right: 0px;
+   bottom: -518px;
+   top: 55px;
 }
+
+.menu--closed {
+   opacity: 0;
+   transform: translateY(100%);
+   transition: opacity 2s cubic-bezier(0.25, 0.46, 0.45, 0.94),
+      transform 2s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+   position: fixed;
+   min-height: 100vh;
+   max-height: 100vh;
+   pointer-events: auto;
+   left: 0px;
+   margin-left: auto;
+   padding-left: 0px;
+   right: 0px;
+   bottom: -518px;
+   top: 55px;
+}
+
+.menu--sliding-down {
+   opacity: 0;
+   transform: translateY(100%); /* Move back to the bottom */
+   transition: opacity 1s cubic-bezier(0.25, 0.46, 0.45, 0.94),
+      transform 1s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+}
+
+.background {
+   position: absolute;
+   width: 0px;
+   height: 0px;
+   opacity: 0;
+   transition: opacity 3s;
+}
+
+div .background--open {
+   background-color: #faf9f6;
+   height: 100vh;
+   width: 100vw;
+   top: 6vh;
+   position: absolute;
+   opacity: 1;
+   transition: opacity 0.5s;
+}
+
+ul {
+   font-size: 1.6rem;
+   font-family: Avenir, HelveticaNeue, Helvetica Neue, Helvetica, Arial, sans-serif;
+   color: #4a4a4a;
+   line-height: 1.625;
+}
+
+li {
+   position: relative;
+   overflow: hidden;
+   margin: 30px;
+ }
+
+ li > a {
+   text-decoration: none;
+   display: inline-block; /* To enable width calculation for pseudo-elements */
+   position: relative; /* To position the pseudo-elements relative to the text */
+ }
+
+ li > a::before,
+ li > a::after {
+   content: "";
+   position: absolute;
+   width: 0;
+   height: 2px; /* Adjust thickness here */
+   background-color: currentColor; /* Use text color for the underline */
+   transition: width 0.3s ease-out; /* Transition effect */
+   bottom: 0; /* Align with the bottom of the text */
+ }
+
+ li > a::before {
+   left: 50%;
+ }
+
+ li > a::after {
+   right: 50%;
+ }
+
+ li > a:hover::before,
+ li > a:hover::after {
+   width: 50%; /* Expand to half the width on hover */
+ }
