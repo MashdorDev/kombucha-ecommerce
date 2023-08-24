@@ -18,3 +18,56 @@
    opacity: 1;
    transition: opacity 0.5s ease;
 }
+
+.btn,
+.btn--secondary {
+   transition: transform 0.3s ease, outline 0.1s linear;
+   -moz-user-select: 'none';
+   -ms-user-select: 'none';
+   -webkit-user-select: 'none';
+   user-select: 'none';
+   -webkit-appearance: none;
+   -moz-appearance: none;
+   appearance: none;
+   display: inline-block;
+   position: relative;
+   width: auto;
+   background-color: #eb4f47;
+   border-radius: 0;
+   color: #ffffff;
+   border: 2px solid #eb4f47;
+   font-size: 1.4rem;
+   font-weight: 700;
+   letter-spacing: 1.5px;
+   text-decoration: none;
+   text-align: center;
+   text-transform: uppercase;
+   padding: 10px 30px;
+   line-height: 2.2;
+   vertical-align: middle;
+   cursor: pointer;
+   transition: outline 0.1s linear;
+   box-sizing: border-box;
+}
+
+a {
+   text-decoration: none; /* Removes the underline */
+   color: inherit; /* Inherits the color from its parent element */
+   cursor: pointer; /* Ensures that the cursor appears as a pointer */
+   background-color: transparent; /* Removes any background color */
+   outline: none; /* Removes the outline when the link is focused or active */
+   -webkit-tap-highlight-color: transparent; /* Removes tap highlight color on mobile devices */
+}
+
+a {
+   text-decoration: none;
+}
+
+a:hover {
+   text-decoration: none;
+}
+
+.btn:hover,
+.btn--secondary:hover {
+  transform: scale(1.05); /* Increase the size by 5% on hover */
+}

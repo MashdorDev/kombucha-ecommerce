@@ -1,34 +1,44 @@
 import React, { useState } from 'react';
-import ProductViewer from './ProductViewer'; // Make sure to import the ProductViewer component
+// import { Link } from 'react-router-dom'; // Import if using React Router
+import ProductViewer from './ProductViewer';
 import './ProdutsSection.css';
+
+// Individual product component
+const Product = ({ product, isSelected, onSelect }) => (
+  <div
+    className={`product btn ${isSelected ? 'product-selected' : ''}`}
+    onClick={() => onSelect(product.path)}
+    role="button"
+    tabIndex={0}
+    onKeyPress={(e) => e.key === 'Enter' && onSelect(product.path)}
+    key={product.path}
+  >
+    <h3>{product.name}</h3>
+    <a href={`/products/${product.path}`}>View Products</a>
+  </div>
+);
 
 function ProductsSection() {
   const [selectedProduct, setSelectedProduct] = useState(null);
 
-  const handleProductClick = (product) => {
-    setSelectedProduct(product);
-  };
+  const products = [
+    { name: 'Kombucha', path: 'kombucha' },
+    { name: 'Kimchi', path: 'kimchi' },
+    { name: 'Sauerkraut', path: 'sauerkraut' },
+    { name: 'Water Kefir', path: 'water-kefir' },
+  ];
 
   return (
     <section className="products">
       <ProductViewer product={selectedProduct} />
       <div className="product-list">
-        <div className="product">
-          <h3 onClick={() => handleProductClick('kombucha')}>Kombucha</h3>
-          <a href="/products/kombucha" >View Products</a>
-        </div>
-        <div className="product">
-          <h3 onClick={() => handleProductClick('kimchi')}>Kimchi</h3>
-          <a href="/products/kimchi" >View Products</a>
-        </div>
-        <div className="product">
-          <h3  onClick={() => handleProductClick('sauerkraut')}>Sauerkraut</h3>
-          <a href="/products/sauerkraut">View Products</a>
-        </div>
-        <div className="product">
-          <h3 onClick={() => handleProductClick('water-kefir')}>Water Kefir</h3>
-          <a href="/products/water-kefir" >View Products</a>
-        </div>
+        {products.map((product) => (
+          <Product
+            product={product}
+            isSelected={selectedProduct === product.path}
+            onSelect={setSelectedProduct}
+          />
+        ))}
       </div>
     </section>
   );

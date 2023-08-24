@@ -5,7 +5,7 @@ function Cart() {
    return (
       <a
          href='/cart'
-         className='btn btn--clear btn--square btn--hover-scale'
+         className='btn--clear btn--square btn--hover-scale'
          aria-expanded='false'
          tabIndex=''
       >
