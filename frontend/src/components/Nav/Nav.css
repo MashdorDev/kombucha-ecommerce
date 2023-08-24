@@ -52,8 +52,8 @@
 .menu--open {
    opacity: 1;
    transform: translateY(0);
-   transition: opacity 2s cubic-bezier(0.25, 0.46, 0.45, 0.94),
-      transform 2s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+   transition: opacity 0.5s cubic-bezier(0.25, 0.46, 0.45, 0.94),
+      transform 0.5s cubic-bezier(0.25, 0.46, 0.45, 0.94);
 
    position: fixed;
    min-height: 100vh;
@@ -70,8 +70,8 @@
 .menu--closed {
    opacity: 0;
    transform: translateY(100%);
-   transition: opacity 2s cubic-bezier(0.25, 0.46, 0.45, 0.94),
-      transform 2s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+   transition: opacity 1s cubic-bezier(0.25, 0.46, 0.45, 0.94),
+      transform 1s cubic-bezier(0.25, 0.46, 0.45, 0.94);
    position: fixed;
    min-height: 100vh;
    max-height: 100vh;
@@ -120,34 +120,57 @@ li {
    position: relative;
    overflow: hidden;
    margin: 30px;
- }
+}
 
- li > a {
+li > a,
+li > a:visited {
    text-decoration: none;
-   display: inline-block; /* To enable width calculation for pseudo-elements */
-   position: relative; /* To position the pseudo-elements relative to the text */
- }
+   color: #4a4a4a; /* Set the color for unvisited and visited links */
+   display: inline-block;
+   position: relative;
+   transition: transform 0.3s ease-out; /* Transition for moving up on hover */
+   text-transform: uppercase;
+   font-family: Arial, Helvetica, sans-serif;
+   font-weight: bold;
+   font-size: 25px;
+}
 
- li > a::before,
- li > a::after {
-   content: "";
+li > a::before,
+li > a::after {
+   content: '';
    position: absolute;
    width: 0;
-   height: 2px; /* Adjust thickness here */
-   background-color: currentColor; /* Use text color for the underline */
-   transition: width 0.3s ease-out; /* Transition effect */
-   bottom: 0; /* Align with the bottom of the text */
- }
+   height: 2px;
+   background-color: currentColor;
+   transition: width 0.3s ease-out;
+   bottom: -2px; /* Align slightly below the bottom of the text */
+}
 
- li > a::before {
+li > a::before {
    left: 50%;
- }
+}
 
- li > a::after {
+li > a::after {
    right: 50%;
- }
+}
 
- li > a:hover::before,
- li > a:hover::after {
-   width: 50%; /* Expand to half the width on hover */
- }
+li > a:hover::before,
+li > a:hover::after {
+   width: 50%;
+   bottom: 0; /* Move up to the bottom of the text on hover */
+}
+
+li > a:hover {
+   transform: translateY(-2px); /* Move up slightly on hover */
+   animation: float 1s infinite ease-in-out; /* Add floating animation */
+}
+
+@keyframes float {
+   0%,
+   100% {
+      transform: translateY(-2px);
+   }
+   50% {
+      transform: translateY(-4px);
+   }
+}

@@ -7,7 +7,7 @@ import FeaturedProduct from '../../components/FeaturedProduct/FeaturedProduct';
 import SlideShow from '../../components/SlideShow/SlideShow';
 import './Home.css';
 
-function Home({ isOpen }) {
+function Home() {
    return (
       <main >
          <SlideShow  />

@@ -1,7 +1,5 @@
 import React, { useEffect, useState } from 'react';
 import './Header.css';
-import logo from '../../assets/narrowgate-logo-site.png';
-import Cart from '../Cart/Cart';
 import Nav from '../Nav/Nav';
 
 function Header({ menuOpen, handleBurgerClick }) {
