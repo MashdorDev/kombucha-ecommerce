@@ -6,8 +6,8 @@ import HeroSection from '../HeroSection/HeroSection';
 function SlideShow() {
    return (
       <div className='slideshow'>
-        <HeroSection />
-        <ProductsSection />
+         <HeroSection className='hero' />
+         <ProductsSection />
       </div>
    );
 }

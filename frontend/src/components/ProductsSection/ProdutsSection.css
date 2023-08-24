@@ -1,6 +1,10 @@
-.product-list{
-    flex-direction: row;
-    display: flex;
-    justify-content: space-between;
+.product-list {
+   position: relative;
+   flex-direction: row;
+   display: flex;
+   justify-content: space-between;
+   margin-bottom: 5%;
+   margin-left: 25%;
+   margin-right: 25%;
+   top: -108px;
 }
-
